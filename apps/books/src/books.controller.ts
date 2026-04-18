@@ -3,10 +3,10 @@ import { BooksService } from './books.service';
 
 @Controller()
 export class BooksController {
-  constructor(private readonly booksService: BooksService) {}
+  constructor(private readonly booksService: BooksService) { }
 
   @Get()
-  getHello(): string {
-    return this.booksService.getHello();
+  findAll() {
+    return this.booksService.findAll();
   }
 }
