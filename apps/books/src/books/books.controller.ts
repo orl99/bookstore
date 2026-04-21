@@ -30,6 +30,8 @@ export class BooksController {
 
   @MessagePattern('books.removeBook')
   remove(@Payload() id: number) {
-    return this.booksService.remove(id);
+    return this.booksService.remove({
+      id
+    });
   }
 }
